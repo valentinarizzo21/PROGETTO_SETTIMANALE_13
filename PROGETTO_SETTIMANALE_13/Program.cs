@@ -9,9 +9,21 @@ class Program
 
         Console.Write("Inserisci il tuo nome: ");
         string nome = Console.ReadLine();
+        while (string.IsNullOrEmpty(nome))
+        {
+            Console.WriteLine("Il nome non può essere vuoto.");
+            Console.Write("Inserisci il tuo nome: ");
+            nome = Console.ReadLine();
+        }
 
         Console.Write("Inserisci il tuo cognome: ");
         string cognome = Console.ReadLine();
+        while (string.IsNullOrEmpty(cognome))
+        {
+            Console.WriteLine("Il cognome non può essere vuoto.");
+            Console.Write("Inserisci il tuo cognome: ");
+            cognome = Console.ReadLine();
+        }
 
         DateTime dataNascita;
         Console.Write("Inserisci la tua data di nascita (gg/mm/aaaa): ");
@@ -25,11 +37,11 @@ class Program
         string codiceFiscale = Console.ReadLine();
 
         char sesso;
-        Console.Write("Inserisci il tuo sesso (M/F/ND): ");
-        while (!char.TryParse(Console.ReadLine().ToUpper(), out sesso) || (sesso != 'M' && sesso != 'F'))
+        Console.Write("Inserisci il tuo sesso (M/F/N): ");
+        while (!char.TryParse(Console.ReadLine().ToUpper(), out sesso) || (sesso != 'M' && sesso != 'F' && sesso != 'N'))
         {
-            Console.WriteLine("Inserisci solo M, F o ND.");
-            Console.Write("Inserisci il sesso (M/F/ND): ");
+            Console.WriteLine("Inserisci solo M, F o N.");
+            Console.Write("Inserisci il sesso (M/F/N): ");
         }
 
         Console.Write("Inserisci il tuo comune di residenza: ");
