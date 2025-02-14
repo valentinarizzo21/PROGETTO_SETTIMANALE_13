@@ -10,7 +10,7 @@ namespace PROGETTO_SETTIMANALE_13.models
     {
         public string Nome { get; set; }
         public string Cognome { get; set; }
-        public DateTime DataNascita { get; set; }
+        public DateTime DataNascita { get; set; } 
         public string CodiceFiscale { get; set; }
         public char Sesso { get; set; }
         public string ComuneResidenza { get; set; }
