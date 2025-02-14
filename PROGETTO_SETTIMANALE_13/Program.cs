@@ -60,11 +60,11 @@ class Program
         decimal imposta = taxpayer.CalculateTax();
 
         Console.WriteLine("\nCALCOLO DELL'IMPOSTA DA VERSARE:");
-        Console.WriteLine($"Dati contribuente: {taxpayer.Nome} {taxpayer.Cognome}, ");
-        Console.WriteLine($"nato/a il {taxpayer.DataNascita:dd/MM/yyyy} ({taxpayer.Sesso}), ");
-        Console.WriteLine($"residente in {taxpayer.ComuneResidenza}, ");
-        Console.WriteLine($"codice fiscale: {taxpayer.CodiceFiscale}");
-        Console.WriteLine($"Reddito dichiarato: {taxpayer.RedditoAnnuale:C}");
-        Console.WriteLine($"IMPOSTA DA VERSARE: {imposta:C}");
+        Console.WriteLine($"\nDati contribuente: {taxpayer.Nome} {taxpayer.Cognome}, ");
+        Console.WriteLine($"\nNato/a il {taxpayer.DataNascita:dd/MM/yyyy} ({taxpayer.Sesso}), ");
+        Console.WriteLine($"\nResidente in {taxpayer.ComuneResidenza}, ");
+        Console.WriteLine($"\nCodice fiscale: {taxpayer.CodiceFiscale}");
+        Console.WriteLine($"\nReddito dichiarato: {taxpayer.RedditoAnnuale:C}");
+        Console.WriteLine($"\nIMPOSTA DA VERSARE: {imposta:C}");
     }
 }
